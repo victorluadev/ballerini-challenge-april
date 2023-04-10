@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Desafio da comunidade Ballerini - Abril 👨‍💻
+Um site para encontrar suas comunidades favoritas do Discord!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link do layout no Figma: [Link](https://www.figma.com/community/file/1225204988453832602)
 
-## Available Scripts
+## Tecnologias 🚀
+Tecnologias usadas durante o desenvolvimento:
+- [React.js](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [HTML & CSS](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
-In the project directory, you can run:
+## Requisitos ✅
+Requisitos que foram desenvolvidos durante a construção do projeto
 
-### `npm start`
+- [x] Layout responsivo
+- [x] Consumo da API do Discord
+- [x] Tipagem de funções e componentes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Requisitos Extras ☑
+Requisitos extras e melhorias que foram propostos para ser desenvolvido durante o desafio
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [ ] Refatoração para compontentes TSX
+- [ ] Implementação do "Light mode"
+- [ ] Adição de um "Skeleton loader"
+- [ ] Implementação da navegação por teclado (uso da tecla "Tab" para alternar entre elementos)
+- [ ] Adição de atalhos para abrir a barra de pesquisa (Control + K ou Cmd + K)
+- [ ] Implementação de traduções
 
-### `npm test`
+## Autor ✒
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Victor Luã** - Fullstack Developer [@victorluadev](https://www.linkedin.com/in/victor-lua/).
