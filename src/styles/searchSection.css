@@ -18,9 +18,11 @@
 }
 
 .searchResults {
-  min-width: 360px;
+  width: 360px;
+  max-height: 480px;
   border-radius: 8px;
   background-color: var(--gray-search);
+  overflow-y: scroll;
 }
 
 .show {
@@ -31,9 +33,26 @@
   display: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-scroll); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--background-button); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-scroll); 
+}
+
 @media only screen and (min-width: 768px){
   .searchContainer,
   .searchResults {
     width: 560px;
+    max-width: 560px;
   }
 }

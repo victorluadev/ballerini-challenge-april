@@ -5,11 +5,13 @@
 
 :root {
   --background: #18181b;
+  --background-scroll: #1d1d1d;
   --background-button: #3F3F46;
   --white: #F4F4F5;
   --gray: #A1A1AA;
   --gray-search: #27272A;
   --gray-text: #52525B;
+  --gray-scroll: #555555;
   --orange: #F97316;
   --font-default: 'Roboto';
 }
