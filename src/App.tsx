@@ -21,7 +21,7 @@ function App() {
             className="searchButton"
           />
         </div>
-        <div className={"searchResults " + (filter.length > 0 ? 'show' : '')}>
+        <div className={"searchResults " + (filter.length > 0 ? 'show' : 'hide')}>
           {filter}
           <div className="itemContainer">
             <img src="https://www.grouphealth.ca/wp-content/uploads/2018/05/placeholder-image-300x225.png" alt="nome do servidor"/>
