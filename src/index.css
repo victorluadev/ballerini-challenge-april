@@ -1,13 +1,16 @@
 @import url('styles/input.css');
 @import url('styles/searchSection.css');
 @import url('styles/itemResult.css');
+@import url('styles/button.css');
 
 :root {
   --background: #18181b;
+  --background-button: #3F3F46;
   --white: #F4F4F5;
   --gray: #A1A1AA;
   --gray-search: #27272A;
   --gray-text: #52525B;
+  --orange: #F97316;
   --font-default: 'Roboto';
 }
 

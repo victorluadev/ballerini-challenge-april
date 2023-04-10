@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [filter, setFilter] = useState<string>("");
 
   return (
-    <React.Fragment>
+    <main>
       <section className="container">
         <span>✍</span>
         <h1>Faça algo mágico...</h1>
@@ -21,21 +21,28 @@ function App() {
             className="searchButton"
           />
         </div>
-        <div className={"searchResults " + (filter.length > 0 ? 'show' : 'hide')}>
-          {filter}
+        <div
+          className={"searchResults " + (filter.length > 0 ? "show" : "hide")}
+        >
           <div className="itemContainer">
-            <img src="https://www.grouphealth.ca/wp-content/uploads/2018/05/placeholder-image-300x225.png" alt="nome do servidor"/>
+            <img
+              src="https://www.grouphealth.ca/wp-content/uploads/2018/05/placeholder-image-300x225.png"
+              alt="nome do servidor"
+            />
             <div className="itemDetails">
               <h1>Comunidade top</h1>
               <h2>20k membros</h2>
             </div>
             <div className="itemActions">
-              <button>Entrar</button>
+              <a href="#text" target="_blank" className="linkInvite" rel="noreferrer">
+              <button className="buttonInvite">Entrar
+              </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
-    </React.Fragment>
+    </main>
   );
 }
 

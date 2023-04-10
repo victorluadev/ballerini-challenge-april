@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   min-width: 360px;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px;
   background-color: var(--gray-search);
+  margin-bottom: 16px;
 }
 
 .searchContainer > span::before {
@@ -17,14 +18,13 @@
 }
 
 .searchResults {
-  align-items: center;
   min-width: 360px;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 8px;
   background-color: var(--gray-search);
 }
 
 .show {
-  display: flex;
+  display: block;
 }
 
 .hide {
