@@ -23,3 +23,7 @@
   font-size: 20px;
   color: var(--gray-text);
 }
+
+.searchButton:focus{
+  outline: none;
+}

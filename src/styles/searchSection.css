@@ -1,0 +1,32 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  min-width: 360px;
+  border-radius: 8px 8px 0px 0px;
+  background-color: var(--gray-search);
+}
+
+.searchContainer > span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  display: inline-block;
+  padding: 20px 14px 20px 24px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: var(--gray-text);
+}
+
+.searchResults {
+  align-items: center;
+  min-width: 360px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: var(--gray-search);
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
