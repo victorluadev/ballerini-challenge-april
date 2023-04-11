@@ -24,7 +24,7 @@ Requisitos extras e melhorias que foram propostos para ser desenvolvido durante 
 - [ ] Adição de um "Skeleton loader"
 - [ ] Implementação da navegação por teclado (uso da tecla "Tab" para alternar entre elementos)
 - [ ] Adição de atalhos para abrir a barra de pesquisa (Control + K ou Cmd + K)
-- [ ] Implementação de traduções
+- [ ] Implementação de traduções (i18n)
 
 ## Autor ✒
 
