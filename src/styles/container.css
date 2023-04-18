@@ -1,0 +1,50 @@
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.mainContainer.dark {
+  background-color: var(--background);
+}
+
+.mainContainer.light {
+  background-color: var(--white);
+}
+
+.container {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
+
+.container > span {
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+
+.container > h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.container.dark > h1 {
+  color: var(--white);
+}
+
+.container.light > h1 {
+  color: var(--background-scroll);
+}
+
+.container > h2 {
+  font-size: 24px;
+  color: var(--gray);
+  margin-bottom: 40px;
+}

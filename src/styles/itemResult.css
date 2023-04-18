@@ -19,17 +19,30 @@
 }
 
 .itemDetails > h1 {
-  color: var(--white);
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 8px;
   word-wrap: normal;
 }
 
+.itemDetails.dark > h1 {
+  color: var(--white);
+}
+
+.itemDetails.light > h1 {
+  color: var(--background-scroll);
+}
+
 .itemDetails > h2 {
-  color: var(--gray);
   font-weight: 400;
   font-size: 14px;
+}
+
+.itemDetails.light > h2 {
+  color: var(--gray);
+}
+.itemDetails.light > h2 {
+  color: var(--gray-text);
 }
 
 .itemActions {

@@ -1,0 +1,23 @@
+.headerContainer {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 360px;
+  min-width: 360px;
+  padding: 1em 0;
+}
+
+.headerItem i {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px){
+  .headerContainer {
+    width: 560px;
+    max-width: 560px;
+  }
+}
