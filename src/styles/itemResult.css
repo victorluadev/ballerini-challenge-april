@@ -30,7 +30,7 @@
 }
 
 .itemDetails.light > h1 {
-  color: var(--background-scroll);
+  color: var(--dark-text);
 }
 
 .itemDetails > h2 {

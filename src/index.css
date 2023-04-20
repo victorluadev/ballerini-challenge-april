@@ -7,15 +7,15 @@
 
 :root {
   --background: #18181b;
-  --background-scroll: #1d1d1d;
   --background-button: #3F3F46;
-  --white: #F4F4F5;
+  --dark-text: #1d1d1d;
   --gray: #A1A1AA;
   --gray-search: #27272A;
-  --white-search: #E3E3E3;
   --gray-text: #52525B;
   --gray-scroll: #555555;
+  --white: #F4F4F5;
   --orange: #F97316;
+  --white-search: #E3E3E3;
   --font-default: 'Roboto';
 }
 
