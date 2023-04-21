@@ -20,7 +20,7 @@ Requisitos que foram desenvolvidos durante a construção do projeto
 Requisitos extras e melhorias que foram propostos para ser desenvolvido durante o desafio
 
 - [ ] Refatoração para compontentes TSX
-- [ ] Implementação do "Light mode"
+- [x] Implementação do "Light mode"
 - [ ] Adição de um "Skeleton loader"
 - [ ] Implementação da navegação por teclado (uso da tecla "Tab" para alternar entre elementos)
 - [ ] Adição de atalhos para abrir a barra de pesquisa (Control + K ou Cmd + K)
