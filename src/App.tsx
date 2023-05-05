@@ -75,8 +75,8 @@ function App() {
         className={`container ${theme.actual === "dark" ? "dark" : "light"}`}
       >
         <span>✍</span>
-        <h1>{t("title").toString()}</h1>
-        <h2>{t("subtitle")}</h2>
+        <h1 tabIndex={0}>{t("title").toString()}</h1>
+        <h2 tabIndex={1}>{t("subtitle")}</h2>
         <div
           className={`searchContainer ${
             theme.actual === "dark" ? "dark" : "light"
@@ -120,7 +120,7 @@ function App() {
                 }`}
               >
                 <h1>{item.name}</h1>
-                <h2>{`${item.approximate_member_count} membros`}</h2>
+                <h2>{`${item.approximate_member_count} ${t("members")}`}</h2>
               </div>
               <div className="itemActions">
                 <a
@@ -129,7 +129,7 @@ function App() {
                   rel="noreferrer"
                   className="linkInvite"
                 >
-                  <button className="buttonInvite">Entrar</button>
+                  <button tabIndex={index} className="buttonInvite">{t("button")}</button>
                 </a>
               </div>
             </div>
