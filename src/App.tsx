@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { IServers } from "./types/servers";
 import { ITheme, TTheme } from "./types/themes";
+import { useTranslation } from "react-i18next";
+
+import BrazilFlag from './img/brazil.svg';
+import UsFlag from './img/us.svg';
 
 function App() {
   const actualTheme = localStorage.getItem("theme")
@@ -11,6 +15,12 @@ function App() {
   const [filter, setFilter] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [communities, setCommunities] = useState<IServers[]>([]);
+  
+  const {t, i18n} = useTranslation();
+
+  const onClickChangeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  }
 
   let timer: NodeJS.Timeout;
 
@@ -24,10 +34,7 @@ function App() {
   ) {
     setLoading(true);
 
-    console.log(loading);
     clearTimeout(timer);
-
-    console.log(event.key);
 
     if (filter.length >= 2 && event.key === "Enter") {
       timer = setTimeout(fetchData, 500);
@@ -50,6 +57,12 @@ function App() {
       className={`mainContainer ${theme.actual === "dark" ? "dark" : "light"}`}
     >
       <header className="headerContainer">
+        <span className="headerItem"> 
+          <i onClick={() => onClickChangeLanguage("ptBR")}> <img src={BrazilFlag} alt ="Bandeira do Brasil" /> </i>
+        </span>
+        <span className="headerItem"> 
+          <i onClick={() => onClickChangeLanguage("en-US")}> <img src={UsFlag} alt ="Bandeira dos Estados Unidos" /> </i>
+        </span>
         <span className="headerItem">
           {theme.actual === "dark" ? (
             <i onClick={() => setTheme({ actual: "light" })}> 🌞 </i>
@@ -62,8 +75,8 @@ function App() {
         className={`container ${theme.actual === "dark" ? "dark" : "light"}`}
       >
         <span>✍</span>
-        <h1>Faça algo mágico...</h1>
-        <h2>Ache sempre tudo em um só lugar!</h2>
+        <h1>{t("title").toString()}</h1>
+        <h2>{t("subtitle")}</h2>
         <div
           className={`searchContainer ${
             theme.actual === "dark" ? "dark" : "light"
@@ -77,7 +90,7 @@ function App() {
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
             onKeyUp={(e) => getServers(e, filter)}
-            placeholder="Faça algo mágico..."
+            placeholder={t("placeholder").toString()}
             className={`searchButton ${
               theme.actual === "dark" ? "dark" : "light"
             }`}
