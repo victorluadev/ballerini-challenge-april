@@ -1,6 +1,9 @@
 # Desafio da comunidade Ballerini - Abril 👨‍💻
-Um site para encontrar suas comunidades favoritas do Discord!
+<div>
+  <img src="./.github/demonstrativo.gif" alt="Demonstrativo da aplicação">
+</div>
 
+Um site para encontrar suas comunidades favoritas do Discord!
 Link do layout no Figma: [Link](https://www.figma.com/community/file/1225204988453832602)
 
 ## Tecnologias 🚀

@@ -48,3 +48,11 @@
   color: var(--gray);
   margin-bottom: 40px;
 }
+
+@media only screen and (min-width: 390px){
+  .container > h2 {
+    text-align: center;
+    font-size: 26px;
+    word-wrap: break-word;
+  }
+}

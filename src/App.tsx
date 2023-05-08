@@ -56,7 +56,7 @@ function App() {
     }
   };
 
-  async function fetchData() {
+  const fetchData = async () => {
     await fetch(
       `https://discord.com/api//discovery/search?query=${filter}&limit=20`
     )
