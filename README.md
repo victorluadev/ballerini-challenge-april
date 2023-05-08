@@ -22,7 +22,7 @@ Requisitos extras e melhorias que foram propostos para ser desenvolvido durante 
 - [x] Implementação do "Light mode"
 - [x] Adição de um "Skeleton loader"
 - [x] Implementação da navegação por teclado (uso da tecla "Tab" para alternar entre elementos)
-- [ ] Adição de atalhos para abrir a barra de pesquisa (Control + K ou Cmd + K)
+- [x] Adição de atalhos para abrir a barra de pesquisa (Control + K ou Cmd + K)
 - [x] Implementação de traduções (i18n)
 
 ## Autor ✒

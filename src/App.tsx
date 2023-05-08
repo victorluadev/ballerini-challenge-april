@@ -1,15 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { IServers } from "./types/servers";
 import { ITheme, TTheme } from "./types/themes";
 import { useTranslation } from "react-i18next";
-
-import BrazilFlag from "./img/brazil.svg";
-import UsFlag from "./img/us.svg";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+import BrazilFlag from "./img/brazil.svg";
+import UsFlag from "./img/us.svg";
+import WrittingHands from './img/Writting Emoji.svg';
+
 function App() {
+  const { t, i18n } = useTranslation();
   const actualTheme = localStorage.getItem("theme")
     ? { actual: localStorage.getItem("theme") as TTheme }
     : { actual: "dark" as TTheme };
@@ -18,12 +21,7 @@ function App() {
   const [filter, setFilter] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [communities, setCommunities] = useState<IServers[]>([]);
-
-  const { t, i18n } = useTranslation();
-
-  const onClickChangeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  const inputRef = useRef<HTMLInputElement>(null);
 
   let timer: NodeJS.Timeout;
 
@@ -35,10 +33,19 @@ function App() {
     communities.length > 0 ? setLoading(false) : setLoading(true);
   }, [communities]);
 
-  function getServers(
-    event: React.KeyboardEvent<HTMLInputElement>,
-    filter: string
-  ) {
+  const handleOnKeyPressEvent = (event: React.KeyboardEvent<HTMLElement>) => {
+    
+    if(event.ctrlKey && (event.key === "k")) {
+      event.preventDefault();
+      inputRef.current !== null ? inputRef.current.focus() : undefined;
+    }
+  }
+
+  const onClickChangeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
+  const getServers = (event: React.KeyboardEvent<HTMLInputElement>,filter: string) => {
     clearTimeout(timer);
 
     if (filter.length >= 2 && (event.key === "Enter" || event.key === " ")) {
@@ -47,7 +54,7 @@ function App() {
       setCommunities([]);
       setLoading(true);
     }
-  }
+  };
 
   async function fetchData() {
     await fetch(
@@ -60,6 +67,8 @@ function App() {
   return (
     <main
       className={`mainContainer ${theme.actual === "dark" ? "dark" : "light"}`}
+      onKeyDown={(e) => handleOnKeyPressEvent(e)}
+      tabIndex={1}
     >
       <header className="headerContainer">
         <span className="headerItem">
@@ -83,9 +92,9 @@ function App() {
       <section
         className={`container ${theme.actual === "dark" ? "dark" : "light"}`}
       >
-        <span>✍</span>
-        <h1 tabIndex={0}>{t("title").toString()}</h1>
-        <h2 tabIndex={1}>{t("subtitle")}</h2>
+        <span><img src={WrittingHands} alt="Mão escrevendo"/></span>
+        <h1>{t("title")}</h1>
+        <h2>{t("subtitle")}</h2>
         <div
           className={`searchContainer ${
             theme.actual === "dark" ? "dark" : "light"
@@ -93,11 +102,12 @@ function App() {
         >
           <span></span>
           <input
+            ref={inputRef}
             type="text"
             id="search"
             name="search"
             value={filter}
-            onChange={(e) => setFilter(e.target.value)}
+            onChange={(e) => {setFilter(e.target.value)}}
             onKeyUp={(e) => getServers(e, filter)}
             placeholder={t("placeholder").toString()}
             className={`searchButton ${
@@ -126,8 +136,7 @@ function App() {
                   </a>
                 </div>
               </div>
-            )
-          )}
+            ))}
           {communities.map((item, index) => (
             <div
               key={index}

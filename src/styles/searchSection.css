@@ -7,6 +7,10 @@
   margin-bottom: 16px;
 }
 
+.searchContainer:has(.searchButton:focus) {
+  border: 1px solid var(--orange);
+}
+
 .searchContainer.dark {
   background-color: var(--gray-search);
 }
